@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<button onClick="console.log('inline')">click</button>
+
+    <!-- 
+    javascript
+    history
+    uses
+    features
+    how js runs ur code
+    event loop mechanism
+
+    how to insert js
+    1) inline
+    - we can embed js logic within the element
+    using onClick it is usefull for function calling
+    <button onClick="console.log('inline')">click</button>
+
+    2) internal
+    - we can embed js using script tag at the bottom  
+    of body
+
+    how to see the output
+  ctrl shift j ----console tab
+
+    3) external
+    - we can embed js logic by writing the program in 
+    separate file with .js extension
+    we can integrate using script tags
+    <script src='demo.js'></script>
+
+
+    variables
+    variables are container for storing data and the
+    data could be anything
+
+    variables are defined with automatic, var ,let and const
+    keywords followed by name (identifier) and value
+    is assigned using = operator
+
+    a=10;
+    var b=20;
+    let c=30;
+    const d=40;
+
+    identifier rules
+    1) it shouldn't starts with numbers but it contains
+        numbers
+        a1---valid
+        1a----not valid
+    2) reserved words cannot be used as keywords
+       if=10 ---not valid
+       loop=10---not valid
+    3) we cannot use any special characters except _ and $
+    &a=10  ---not valid
+    _a=10----valid
+    $a=10----valid
+    4) variables are case sensitive
+    a=10
+    A=20
+    console.log(a)//10
+    console.log(A)//20
+    5) use camelCase
+    var userName='john'
+    var studentId=7
+
+    variable terms
+    1) variable declaration- 
+       definition a memory for a variable in an environment
+
+    var somename
+    var age
+    var city
+
+    console.log(city)
+
+    undefined
+    variable is defined but value hasn't assigned
+    variable without an value
+
+    not defined-un existing variable
+    variable haven't defined in environment
+
+2) variable assignment
+  assigning a value after defining an varaible
+  var city;
+  city='hyd'
+
+  reassignment 
+  city='hyd'
+  city='vizag'
+    
+3) variable initialization
+defining an variable and assigning the value within
+the same line 
+var city='chennai';
+
+
+hoisting
+it is a behaviour  where the declarations of an 
+variable and functions are moved to top 
+even before the execution
+
+console.log(a)//undefined
+var a=10
+
+datatypes
+1) primitive data types
+   a) where we can store single values
+   b) which is immutable
+   c) where we can get by the value and pass by the value
+   d) stored in stack
+
+2) non primitive data types
+   a) where we can store multiple values
+   b) which are mutable
+   c) where we can get by the reference and pass by the
+      reference
+   d) stored in heap
+
+   
+   in primitive
+   1) strings- it is a collection of characters that 
+   are enclosed in single or double or backticks
+
+   var str='hello'
+   console.log(str)//hello
+   console.log(str[0])//h
+   str[0]='z'
+   console.log(str[0])//will get h only because of immutability
+
+   2) numbers
+   var a=10
+   var b=-10
+   var c=-10.9
+
+   3) boolean - true or false
+   var a=true
+   var b=false
+
+   4) undefined- without an value
+   5) null - intensional absence of an value
+     var a
+     console.log(a+1)//NaN
+     var a=null
+     console.log(a+1)//0+1
+
+     non primitive
+     1) array- it is used to store collection of items
+     in a single variable and be accessed by index reference
+
+     let arr=['html','css','js']
+     console.log(arr)//['html','css','js']
+     console.log(arr[0])//html
+     arr[0]='react'
+     console.log(arr[0])//react
+
+
+     2) objects
+     it is used to store the data in key and value pairs
+     and can be accesed by named index reference
+     let obj={
+     name:'john',
+     age:25,
+     dob:1
+     }
+     console.log(obj)//whole data
+     console.log(obj)//whole data
+     console.log(obj['name'])//john
+     console.log(obj.age)//25
+
+     3) function 
+     it is a block of reusable code  that is used to 
+     perform one operation
+     function getdata(){
+     console.log('hello world')
+     }
+     getdata()
+
+     built in datatypes
+     data
+     set
+     map
+
+     alert('hello')
+
+
+
+
+
+   
+
+
+
+    -->
+    
+<script>
+      function getdata(){
+     console.log('hello world')
+     }
+     getdata()
+     getdata()
+     getdata()
+     getdata()
+     getdata()
+     getdata()
+</script>
+<script src="demo.js"></script>
+</body>
+</html>
