@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        operators
+        type conversion
+        truthy and falsy values
+        prompt
+
+        conditional statements
+        it is used to execute a block of code 
+        based on a condition and it controls the flow
+        of the execution of the program
+
+        if-it is used to execute a block if the condition
+            is true - if false interpreter skips that part
+
+        if(conditon){
+        //block of code
+        }
+        let num=-10
+        if(num>0){
+           console.log('its positive')
+        }
+
+        num=-10
+        if (num>0) console.log('its positive')
+
+
+
+
+        if else
+        it will execute if block when the condtion is true
+        and else block when the condition is false
+        let num=-10
+        if(num>0){
+            console.log(num, ' is positive number')
+        }
+        else{
+            console.log(num, ' is negative number')
+        }
+
+        if else if
+        it is used to execute different block when the condition
+        is true and it is used when you want to check more
+        than one condtion and exeuctes else block
+        if all conditions are false
+
+        if(cond){
+        //block
+        }
+        else if(cond 2){
+        //block
+        }
+        else if(cond 3){
+        //block
+        }
+        else{
+        //else block
+        }
+        
+
+        let num=-10
+        
+        if (num>0){
+            console.log('positive')
+        }
+        else if(num==0){
+            console.log('zero')
+        }
+        else{
+            console.log('negative')
+    }
+
+
+    marks=30
+    
+    if (marks>=90){
+        console.log('grade a')
+       }
+       else if (marks>=80){
+        console.log('grade b')
+        
+    }
+    else if(marks>=50){
+        console.log('grade c')
+        
+    }
+    else if(marks>=35){
+        console.log('grade d')
+        
+    }else{
+        console.log('fail')
+    
+}
+
+
+let username='john'
+let password='john123'
+
+let inp1=prompt('enter a username')
+let inp2=prompt('enter a password')
+
+if (inp1==username && inp2==password){
+    console.log('login successfull')
+}
+else{
+    console.log('failed to login')
+}
+
+nested if
+
+if (true){
+ if(false){
+ //block1
+ }
+ else{
+ //block 2
+}
+}
+else{
+//block 3
+}
+
+if (true){
+    if(true){
+ //block1
+ console.log('block1')
+ }
+ else{
+    //block 2
+ console.log('block2')
+ 
+}
+}
+else{
+    //block 3
+console.log('block3')
+ 
+}
+
+num=-11
+if (num>0){
+    if (num%2==0){
+        console.log(num,' is even')
+    }else{
+        console.log(num,' is odd')
+    }
+}
+else{
+    console.log('negative number')
+}
+
+
+switch case
+
+it is used to execute different cases block based on
+evaluated expression
+when expression matches by strict equality operator then
+it will execute the matching case
+otherwise it will execute default case
+
+let a=1
+switch (4-a){
+    case '1': console.log('case 1a matched');
+            break;
+            case 1: console.log('case 1b matched')
+            break;
+            case 2: console.log('case 2 matched')
+            break;
+            case 3: console.log('case 3 matched')
+            break;
+            default: console.log('nothing is matched')
+        }
+        */
+       let num1=+prompt('enter a num1')
+       let num2=+prompt('enter a num2')
+       let opp=prompt("enter a operator symbol")
+       switch(opp){
+        case '+':console.log(num1+num2);
+                break;
+         case '-':console.log(num1-num2);
+                break;    
+        case '*':console.log(num1*num2);
+              break; 
+        case '/':console.log(num1/num2);
+             break;   
+        default: console.log('invalid operator')       
+       }
+        
+        
+</script>
+</body>
+</html>
