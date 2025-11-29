@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        
+        loops
+        for loop
+
+
+        jump statements
+        break -
+        it is used to terminate the execution of the loop
+        for(var i=1;i<=10;i++){
+            if (i==5){
+                break
+            }
+            console.log(i)
+        }
+
+        continue -
+        it is used to skip the current iteration of the 
+        loop and moves control to the next iteration
+        for(var i=1;i<=10;i++){
+            if (i==5){
+                continue
+            }
+            console.log(i)
+        }
+        
+        nested loop
+
+
+
+
+        for (var i=1;i<=10;i++){
+            console.log('hello')
+            for (var j=1;j<=5;j++){
+                if(j==3){
+                    break;
+                }
+                console.log('hi')
+            }
+        }
+        
+        for (j=1;j<=5;j++){
+            for (var i=1;i<=10;i++){
+                console.log(j+"*"+ i+"="+ i*j)
+            }
+            console.log('next table')
+        }
+
+        while loop
+        it is used execute a block of code until the 
+        condition is true
+        it is a event controlled loop
+        it is used when we dont know the no of iterations
+        syntax
+        intialization
+        var a=1
+
+        while ( a<10){//condition
+        //block of code
+        console.log(a)
+        //updation
+        a++
+        }
+
+        while(true){
+    order=prompt('enter ur order items')
+    if (order=='done'){
+        console.log('completed placing an order')
+        break
+    }
+}
+
+var a=1
+
+
+while ( a<10){//condition
+        //block of code
+        console.log(a)
+        //updation
+        a++
+    }
+    
+do while
+it is used to executed a block of code even the condition
+is false for one time 
+when the condtion is true it will execute untill it becames 
+false
+
+var a=1
+do {
+console.log(a)
+a++
+}while(a>10)
+output:1 
+
+for in loop
+it is used to iterated the keys or indexes or values
+of an iterable datatypes like string,arrays and objects
+
+let str='hello world'
+for (let i in str){
+console.log(i)//indexes
+console.log(str[i])//values
+}
+
+let arr=['html','css','js']
+for (let i in arr){
+console.log(i)//indexes
+console.log(arr[i])//values
+}
+
+let obj={
+name:'john',
+age:25}
+for (let i in obj){
+console.log(i)//keys
+console.log(obj[i])//values
+}
+
+
+for of loop
+it is used to iterate the values of a string and array
+
+let str='javascript'
+for (let i of str){
+    console.log(i)//values
+}
+
+let arr=["html",'css','js']
+for (let i of arr){
+console.log(i)//values
+}
+
+
+break
+
+
+continue
+
+
+password='1234'
+c=0
+while(true){
+    inp=prompt('enter ur password')
+    if (inp=='1234'){
+        console.log('access granted')
+        break
+    }
+    else{
+        c++
+}
+    if (c==3){
+        console.log('card is blocked')
+        break
+    }
+}
+
+
+*/
+
+let arr=[
+    {
+        code:12,
+        status:'expired'
+    },
+    {
+code:1,
+status:'not expired'
+},
+   {
+code:2,
+status:'not expired'
+},
+   {
+code:132,
+status:'expired'
+}
+]
+
+for ( let i of arr){
+    if ( i['status']=='expired'){
+        continue
+    }
+    console.log(i)
+}
+        </script>
+</body>
+</html>
