@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+     
+    </style>
+</head>
+<body>
+    <h1 ><b>
+        heading 1
+    </b> </h1>
+<h1 class="el">heading 2</h1>
+<div class="el">div</div>
+<p class="el">paragrap1</p>
+<p id="demo">paragrap2</p>
+    <script>
+        /*
+        dom- document object model
+
+        it is standard object model that allows
+        scripts and programs to control the style
+        ,structure and content of a webpage
+
+        dom connects scripts to webpages
+        dom have methods for accessing and properties
+            for manipulation
+
+        dom have two types of objects
+        1) document level objects
+        2) element level objects
+
+        console.log(document)//whole document
+
+        how to access the elements (methods)
+        1) based on tagnames- which comes in collection
+            and accessed by indexing
+        var headings=document.getElementsByTagName('h1')
+        console.log(headings[0])//first element
+        console.log(headings[1])//second element
+
+        2) based on classname-which comes in collection
+            and accessed by indexing
+        var els=document.getElementsByClassName('el')
+        console.log(els[0])
+        console.log(els[1])
+
+        3) based on id -which return single unique element
+        var el=document.getElementById('demo')
+       console.log(el)//returns the element no need indexing
+
+       4) query selector -
+        it is used to return the first precedence of 
+        #id or tagname or .classname
+        var queryel=document.querySelector('p')
+       console.log(queryel)
+       var queryel=document.querySelector('.el')
+       console.log(queryel)
+       var queryel=document.querySelector('#demo')
+       console.log(queryel)
+
+       5) query selector all
+       it is used to return the collection based on
+       #id or tagname or .classname
+        
+       var queryel=document.querySelectorAll('p')
+      console.log(queryel[1])//second elemnt
+      var queryel=document.querySelectorAll('.el')
+      console.log(queryel)//collection of element by classname
+      var queryel=document.querySelectorAll('#demo')
+      console.log(queryel)//single element but in array format
+      
+      how to access the content- properties
+      method.innerText
+      method.innerHTML
+      method.textContent
+      
+ var el=document.querySelector('h1')
+console.log(el.innerText)//returns the content only
+console.log(el.innerHTML)//returns the html and content
+console.log(el.textContent)
+
+if it is a collection
+var p=document.getElementsByTagName('p')//[p,p]
+console.log(p[1].innerText)//paragraph2
+
+how to modify content- properties
+method.property='new content'
+
+var div=document.getElementsByTagName('div')
+//add even html as a text
+div[0].innerText='<b><u>hello world</u></b>'
+
+//converts html and it will add text 
+div[0].innerHTML='<b><u>hello world</u></b>'
+
+
+how to add stylings
+method.style.propertName='value'
+      */
+var heading1=document.getElementsByTagName('h1')[1]
+heading1.style.color='orange'
+heading1.style.backgroundColor='blue'
+heading1.style.fontSize='40px'
+
+
+    </script>
+</body>
+</html>
