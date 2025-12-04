@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dom</title>
+    <style>
+        /* .demo{
+           color:white;
+           background: blue; 
+           font-size: 40px;
+        }
+        .demo2{
+            padding:20px;
+            margin:20px;
+            
+
+        } */
+
+        .darkwhite{
+            background: black;
+            color:white;
+        }
+        .menu{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- <h1>title</h1> -->
+<!-- 
+    <button onclick="backgroundtoggle()">dark theme</button>
+    <button onclick="navbar()">menu</button>
+    <ul class="menu" >
+        <li>content</li>
+        <li>content</li>
+        <li>content</li>
+    </ul>
+
+    <form action=""><input type="text"></form>
+    
+    <a href="day11.html" title="html">html</a>
+    <a href="day11.html" title="html">html</a>
+    <a href="day11.html" title="html">html</a>
+    <a href="day11.html" title="html">html</a> -->
+<!-- 
+    <form action="">
+        <button>con</button>
+        <button>con</button>
+    </form> -->
+    <h1>to do list</h1>
+    <button onclick="addtask()">add task</button>
+    <ul>
+        
+    </ul>
+    <script>
+        /*
+        let el=document.querySelector('h1')
+       el.style.color='white'
+       el.style.background='blue'
+       el.style.fontSize='40px'
+
+    
+        
+       let el=document.querySelector('h1')
+       //how to add a group of style using classname
+        el.classList.add('demo')
+        el.classList.add('demo2')
+        
+        //how to remove
+        el.classList.remove('demo')
+        
+        //toggle - it will add classname if there is no class
+        //       otherwise it remove the class
+        el.classList.toggle('demo')
+        el.classList.toggle('demo')
+        
+        
+        function backgroundtoggle(){
+            let body=document.querySelector('body' )
+            body.classList.toggle('darkwhite')
+        }
+        
+        function navbar(){
+            let ul=document.querySelector('ul')
+            ul.classList.toggle('menu')
+        }
+    1) element level objects
+    2) document level objects
+       1) document.body - it return the body element
+       2) document.scripts- it will return scrip tag in a
+                        collection
+        3) document.title- it return the title content
+        4) document.forms-it will return forms in a
+                        collection
+        5) document.links - it will return the anchor 
+            links in a collection
+        6) document.head- it will return the head element
+
+
+        how to create element
+        let li1=document.createElement('li')
+        li1.innerText='list1'
+
+        let li2=document.createElement('li')
+        li2.innerText='list2'
+
+        how to append element
+       let ul=document.querySelector('ul')
+        ul.append(li1,li2)
+
+
+
+        */
+
+        function addtask(){
+            let ul=document.querySelector('ul')
+            let inp=prompt('enter a task')
+            let li=document.createElement('li')
+            li.innerText=inp
+            ul.append(li)
+            console.log(inp)
+            console.log(ul)
+           
+        }
+      
+  
+
+
+    </script>
+</body>
+</html>
