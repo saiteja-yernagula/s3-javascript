@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <button onclick="myFunction()">Click me</button> -->
+
+    <!-- <div class="text"></div> -->
+
+    <form action="">
+        <input type="text" value="john">
+        <input type="text">
+        <button type="submit">submit</button>
+    </form>
+    <script>
+        /*
+        types of events
+        Event handlers:
+Event handlers are functions in JavaScript that are 
+responsible for handling specific types of events. 
+They define what should happen when a particular event occurs.
+        
+        1) inline event handlers
+        <button onclick="myFunction()">Click me</button>
+
+        function  myFunction(){
+          console.log('inline event handler')
+        }
+
+
+        2) dom event handler
+        let btn=document.createElement('button')
+        btn.innerText='dom click'
+        
+        let txt=document.querySelector('.text')
+        btn.addEventListener('click',function(){
+            txt.innerText='dom event handler is triggered'
+        })
+        
+        btn.addEventListener('dblclick',function(){
+            txt.innerText='double click event handler is triggered'
+        })
+        
+        btn.addEventListener('mousemove',function(){
+            alert('mouse crossed over an element')
+        })
+        btn.addEventListener('mouseover',function(){
+            document.body.style.background='navy'
+        })
+        
+        btn.addEventListener('mouseout',function(){
+            document.body.style.background='white'
+        })
+        
+
+        document.body.append(btn)
+       
+        how to access form values
+
+        1) using document objects
+    document.forms[0].addEventListener('submit',function(e){
+      e.preventDefault()//it is used to prevent the default 
+             //submission of the form 
+
+            console.log(document.forms[0][0].value)
+            console.log(document.forms[0][1].value)
+        })
+
+        2) using event.target
+        document.forms[0].addEventListener('submit',function(e){
+         e.preventDefault()
+            console.log(e.target[0].value)
+            console.log(e.target[1].value)
+        })
+        
+        3) using element level objects
+        var inp1=document.getElementsByTagName('input')
+        console.log(inp1[0].value)
+
+   
+        */ 
+
+        //keyboard events
+       document.addEventListener('keydown',function(e){
+        console.log(e.key)
+        if(e.key=="Enter"){
+            document.body.style.background='yellow'
+        }
+       })
+    //how to prevent developer options
+       document.addEventListener('keydown',function(e){
+        if((e.shiftKey && e.ctrlKey) && e.key=='J'){
+            e.preventDefault()
+        }
+       })
+
+// how to prevent menu
+       document.addEventListener('contextmenu',function(e){
+        e.preventDefault()
+       })
+
+
+    </script>
+
+</body>
+</html>
