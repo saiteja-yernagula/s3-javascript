@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="text">
+
+<h1>lore</h1>
+<h1>lore</h1>
+<h1>lore</h1>
+<h1>lore</h1>
+<h1>lore</h1>
+<h1>lore</h1>
+<h1>lore</h1>
+<h1>lore</h1>
+<h1>lore</h1>
+<h1>lore</h1>
+<h1>lore</h1>
+<h1>lore</h1>
+<h1>lore</h1>
+<h1>lore</h1>
+<h1>lore</h1>
+<h1>lore</h1>
+<h1>lore</h1>
+<h1>lore</h1>
+<h1>lore</h1>
+<h1>lore</h1>
+<h1>lore</h1>
+<h1>lore</h1>
+<h1>lore</h1>
+<h1>lore</h1>
+
+
+    <script>
+        /*
+
+        events 
+        types of events
+        mouse events
+        keyboard event
+        
+        form 
+        - submit
+     document.forms[0].addEventListener('submit',(e)=>{
+     e.preventDefault()
+     console.log(e.target[0].value)
+     console.log(e.target[1].value)
+    })
+
+     <form >
+        <input type="text">
+        <input type="text">
+        <button>submit</button>
+    </form>
+
+        - change
+        let opt=document.querySelector('.opt')
+        let txt=document.querySelector('.txt')
+        opt.addEventListener('change',()=>{
+            if (opt.value=='html'){
+                txt.innerHTML="it is standard markup language"
+            }
+            if (opt.value=='css'){
+                txt.innerHTML="it is a style sheet language"
+            }
+            if (opt.value=='js'){
+                txt.innerHTML="it is scripting language"
+            }
+        })
+        
+    <select name="" id="" class="opt">
+        <option value="html">html</option>
+        <option value="css">css</option>
+        <option value="js">js</option>
+    </select>
+    <div class="txt"></div>
+
+    let inp=document.querySelector('.clr')
+        inp.addEventListener('change',()=>{
+            document.body.style.background=inp.value
+        })
+    <input type="color" class="clr">
+    
+    - input
+    <input type="text">
+
+        - focus
+        - blur
+        let inp=document.querySelector('input')
+    inp.addEventListener('input',()=>{
+        console.log(inp.value)
+    })
+
+    inp.addEventListener('focus',()=>{
+        inp.style.background='yellow'
+    })
+
+    inp.addEventListener('blur',()=>{
+        alert('blur event is triggered')
+    })
+
+        window events 
+
+    resize
+    load
+    scroll
+        
+        */ 
+
+    window.addEventListener('resize',()=>{
+        console.log(window.innerWidth)
+        console.log(window.innerHeight)
+        if(window.innerWidth<600){
+            document.body.style.background='red'
+        }
+    })
+
+    window.addEventListener('load',()=>{
+        alert('welcome to our page')
+    })
+
+    window.addEventListener('scroll',()=>{
+        console.log(window.scrollX)
+        console.log(window.scrollY)
+        if (window.scrollY>500){
+            document.body.style.color='red'
+        }
+    })
+
+
+  
+        
+    </script>
+    
+</body>
+</html>
