@@ -64,6 +64,45 @@
     </style>
 </head>
 <body>
-    
+  
+    <div class="calculator">
+        <input type="text">
+        <div class="buttons">
+            <button onclick="addbtn('1')">1</button>
+            <button onclick="addbtn('2')">2</button>
+            <button onclick="addbtn('3')">3</button>
+            <button onclick="delinp()">del</button>
+            <button onclick="addbtn('4')">4</button>
+            <button onclick="addbtn('5')">5</button>
+            <button onclick="addbtn('6')">6</button>
+            <button onclick="addbtn('+')">+</button>
+            <button onclick="addbtn('7')">7</button>
+            <button onclick="addbtn('8')">8</button>
+            <button onclick="addbtn('9')">9</button>
+            <button onclick="addbtn('-')">-</button>
+            <button onclick="addbtn('0')">0</button>
+            <button onclick="addbtn('*')">*</button>
+            <button onclick="calc()" class="equal">=</button>
+            <button onclick="clr()" class="clear" >ac</button>
+        </div>
+    </div>
+    <script>
+        let inp=document.querySelector('input')
+
+        function addbtn(n){
+            inp.value+=n
+        }
+
+        function clr(){
+            inp.value=''
+        }
+        function calc(){
+            inp.value=eval(inp.value)
+        }
+
+        function delinp(){
+            inp.value=inp.value.slice(0,inp.value.length-1)
+        }
+    </script>
 </body>
 </html>
