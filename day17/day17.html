@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        array
+        it is a special type of object used to store
+        collection of items in a single variable
+
+        can be accesed using numbered indexing
+
+        features of an array
+        1) homogenous and heterogenous
+        2) mutable
+        3) order collection 
+        4) dynamic sizing
+        5) multi dimensional array
+
+        how to create an array
+        1) let arr= new Array()
+        2) let arr=[1,2,3]
+
+        how we can access
+        console.log(arr)//[1,2,3]
+        console.log(arr[0])//1
+        console.log(arr[-1])//undefined
+
+        how to add
+        arr[3]='new value'
+
+        how to modify
+        arr[0]='hello'
+
+       how to find the length
+       arr.length - it is used to return no of items 
+       in an array
+
+       how to iterate
+       for (i=0;i<arr.length;i++){
+       console.log(i)//index
+       console.log(arr[i])//values
+       }
+
+       for ( let i of arr){
+       console.log(i)//values
+       }
+        
+       for ( let i in arr){
+       console.log(i)//indexes
+       console.log(arr[i])//values
+       }
+       
+       array methods
+       1) length- it is used to return the no of items
+       in an array
+       let arr=['html','css','js']
+       console.log(arr.length)//3
+
+       2) at - it is used to return the item at specified
+       index and also takes negative integers
+       console.log(arr.at(1))//css
+       console.log(arr.at(-1))//js
+
+       3) concat - it is used to merge two or more arrays
+       let arr1=['html','css','js']
+    let arr2=['python','django']
+    console.log(arr1.concat(arr2,['mysql']))
+
+    4) splice - it is used to manage the items in an array
+    by adding , removing, modifying  and it works on the 
+    existing array
+
+    syntax
+    arr.splice(startindex, deletecount,'newitem1','newitem2')
+    let fullstack=['html','css','js','python','django','mysql']
+    
+    //how to replace
+    fullstack.splice(3,2,'node js','express js')
+    //how to add
+    fullstack.splice(3,0,'react')   
+    //how to delete
+    fullstack.splice(0,4)
+    console.log(fullstack)
+
+    5) slice
+    it it used to return the portion of an array
+    and it creates new array
+    
+    let fullstack=['html','css','js','python','django','mysql']
+    console.log(fullstack.slice(0,3))
+    console.log(fullstack.slice(3,5))
+    console.log(fullstack.slice(-3))
+    
+    6) push
+    it is used to add a item at the ending of an array
+    and it returns the length
+
+    7) pop
+    it is used to remove a item at the ending of an 
+    array and it return the removed item
+
+    8) unshift
+    it is used to add a item at the beginning and returns
+    length
+
+    9) shift
+    it is used to remove a item at the beginning and returns
+    removed item
+    let arr=['html','css']
+    
+    console.log( arr.push('js'))//add value and return length
+    console.log(arr.pop())//js
+    console.log(arr.unshift('web fundamentals'))//add value at beginning
+    console.log(arr.shift())//'web fundamentals'
+    
+    10)  sort- it is used sort the items based
+    on lexicographical ordering
+    let arr=[11,3,6,1]
+    console.log(arr.sort())//1 11 3 6 
+    
+    11) reverse 
+    it is used to reverse an array
+    let arr=[11,3,6,1]
+    console.log(arr.reverse())
+
+    12) join
+    it is used to convert the array into string based
+    on a separator
+    let arr=['html','css','js']
+   console.log(arr.join('*'))
+
+   13) flat- it is used to flatten an array by specified depth
+   let arr=[1,[2,3],[4,[5]]]
+    console.log(arr.flat(4))
+
+    search methods
+    let arr=['html','css','html','js']
+    includes used to check the existence of an items
+    and returns true or false
+    console.log(arr.includes('css'))//true
+    console.log(arr.includes('react'))//false
+
+indexof and lastindex of is used to return the index
+of first occurence and if not found returns -1
+    console.log(arr.indexOf('html'))//0
+    console.log(arr.indexOf('html',1))//2
+    console.log(arr.lastIndexOf('html'))//2
+    console.log(arr.lastIndexOf('react'))//-1
+    */
+
+
+
+
+        
+    </script>
+</body>
+</html>
