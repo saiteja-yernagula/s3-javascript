@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        
+
+student management system
+var std=['john','jenny']
+
+flag=true
+while(flag){
+    var inp=+prompt(`
+    enter ur option
+    1. Add Student
+    2. View All Students
+    3. Update Student
+    4. Delete Student
+    5. Search Student
+    6. Sort Students
+    7. Reverse List
+    8. Exit`
+)
+
+switch(inp){
+    case 1 :
+        let newname=prompt('enter a name ')
+        std.push(newname)
+        break;
+        case 2:
+            console.log(std)
+            break;
+            case 3:
+                let updname=prompt('enter a name which u want to update')
+                let updindex=std.indexOf(updname)
+                if (updindex==-1){
+                    console.log('student not found')
+                }
+                else{
+                    let newupdname=prompt('enter a new name')
+                std.splice(updindex,1,newupdname)
+        }
+        break;
+        case 4:
+            let delname=prompt('enter a name to delete')
+            let delindex=std.indexOf(delname)
+            if(delindex==-1){
+                console.log('student not found')
+        }
+        else{
+            std.splice(delindex, 1)
+        console.log('deleted')
+    }
+    break;
+    case 5 :
+        let searchname=prompt('enter a name to search')
+        if(std.includes(searchname)){
+            console.log('student found')
+        }
+        else{
+            console.log('not found')
+    }
+    break;
+    case 6:
+        std.sort()
+        console.log('sorted')
+        break;
+        case 7:
+            std.reverse()
+            console.log('reversed')
+            break; 
+            case 8:
+                console.log('operation exited')
+                flag=false
+                break;
+            }
+        } 
+
+
+
+        */
+
+        
+// let arr=['html','css','js']
+//shallow copy - where the referencies are copies to another
+// variable not the actual values
+        // let b=arr
+        // b[0]='python'
+        // console.log(arr)//['python','css','js']
+        // console.log(b)//['python','css','js']
+//deep copy- where the values are copied not references
+// using spread operator 
+//it is used to spread the iterable values
+// let c=[...arr]
+//         c[0]='node js'
+//         console.log(arr)//['html','css','js']
+//         console.log(c)//['node js','css','js']
+
+
+// rest operator - it is denoted with ...
+//  function should contain only one rest operator
+// it should at the ending only
+// function greet(b,c,...a){//rest operator
+//     console.log(a)
+// }
+
+// arr=[1,2,3,4]
+// greet(...arr)//spread operator
+
+// destructuring- it is a process of extracting the values
+// from an array,objects and assigning to an variable
+
+let arr=[[['html','css'],['js']],['python','django']]
+
+let [[static,[dynamic]],backend]=arr
+console.log(dynamic) 
+
+        </script>
+</body>
+</html>
