@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+
+        how to find sum of an array
+        let arr=[1,2,4,5,6]
+       let sum=0
+       let prod=1
+       for (i of arr){
+        sum+=i
+        prod*=i
+       }
+       console.log(sum)
+       console.log(prod)
+
+       how to reverse an array
+       let arr=[1,2,3]
+      let rev=[]
+      for (i=arr.length-1;i>=0;i--){
+        rev.push(arr[i])
+      }
+      console.log(rev)
+
+
+      3) Take a heterogenious array and separate each data type into new array
+hints : use loop, typeof and push method 
+inp: let arr = ["apple", "banana", "mango", "banana", 3, 4, 5, 6, true, {name: "object"}];
+out : 
+
+let arr = ["apple", "banana", "mango", "banana", 3, 4, 5, 6, true, {name: "object"}];
+let str=[]
+for ( i of arr){
+    if(typeof i =="string"){
+        str.push(i)
+    }
+}
+console.log(str);
+
+how to remove duplicates in a array
+let arr=[1,2,2,4,5]
+let uniq=[] 
+
+for (let i of arr){
+    if(!uniq.includes(i)){ 
+        uniq.push(i)
+    }
+}
+if(arr.length==uniq.length){
+    console.log('doesnt contain duplicates')
+}else{
+    console.log('it contain duplicates')
+}
+console.log(uniq);
+
+how to find whether a min is first or max is first
+let arr=[28,37,9,99,3,24]
+let min=arr[0]
+let max=arr[0]
+let minind=0
+let maxind=0
+
+for (i in arr){
+    if(arr[i]<min){
+        min=arr[i]
+        minind=i
+    }
+    if(arr[i]>max){
+        max=arr[i]
+        maxind=i
+    }
+}
+console.log(min,max)
+console.log(minind,maxind)
+if(minind<maxind){
+    console.log('min is first')
+}
+else{
+    console.log('max is first')
+}
+
+
+let arr=[4,9,11,12,13]
+let primes=[false,false,true,false,true]
+
+
+9, 2,3--non prime
+11-- 2,3,4,5,6,10
+
+
+let arr=[4,9,11,12,13]
+// let output=[false,false,true,false,true]
+let emp=[]
+function isprime(n){
+    for (i=2;i<n;i++){
+        if(n%i==0){
+            return false
+        }
+    }
+    return true
+}
+
+for (j of arr){
+    emp.push(isprime(j))
+}
+console.log(emp)
+
+
+
+higher order functions
+higher order functions are functions that takes function
+as an argument and returns result with modified value
+
+inbuilt hof
+forEach
+map 
+filter
+reduce
+find
+some
+every
+
+forEach
+it is used to iterate a elements of an array by applying
+a provided function for each element and it doesn't 
+return anything and it works on the existing array
+
+arr=['html','css','js']
+syntax
+arr.forEach((val,ind,ar)=>{
+console.log(val)//it will get the each value
+console.log(ind)//it will get the each index
+console.log(ar)//it will get arr upto the length
+})
+
+map
+it is used to transform an element by applying
+provided function for each element
+it returns transformed array
+it always creates new array
+
+arr=[1,2,3]
+syntax
+let newarr =arr.map((val,ind,ar)=>{
+    return val+val
+   })
+console.log(newarr)//[2,4,6]
+*/
+arr=[1,2,3]
+// syntax
+let newarr =arr.map((val,ind,ar)=>{
+ return val%2==0
+})
+console.log(newarr)
+
+</script>
+</body>
+</html>
