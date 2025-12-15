@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+
+        
+        higher order functions
+
+        1) forEach- doesnt return, existing array, iterating
+        2) map- returns transformed array,new array,transforming
+        
+        // data.forEach((val)=>{
+    //     console.log(val.name)
+    // })
+
+    let newdata=data.map((val)=>{
+        return val.age<25
+    })
+    console.log(newdata)
+
+
+        filter 
+        it is used to create a new array that passes a certain
+        condition by applying provided function for every element
+        and returns filtered array
+
+        let arr=[1,2,3,4,5,6]
+        let evenarr=arr.filter((val,ind,ar)=>{
+        return val%2==0
+        })
+        console.log(evenarr)
+
+        let oddarr=arr.filter(val=>val%2!=0)
+        console.log(oddarr)
+        
+        
+    // let filterbyage=data.filter((val)=>{
+    //     return val.age<20
+    // })
+    // console.log(filterbyage)
+    
+    // let filterbybranch=data.filter((val)=>{
+    //     return val.branch=='cse'
+    // })
+    // console.log(filterbybranch)
+
+    
+    reduce 
+    it is used to convert the array of elements into single value
+    by performing any kind of mathematical operation
+
+    let arr=[1,2,3]//6
+    let sumarr=arr.reduce((acc,val,ind,ar)=>{
+    return acc+val
+    },0)
+    console.log(sumarr)
+
+    let prodarr=arr.reduce((acc,val,ind,ar)=>{
+    return acc*val
+    },1)
+    console.log(prodarr)
+
+    sort - it is used to sort the elements of an array
+    by applying provided function nd  returns sorted array
+
+    let arr=[20,10,15,20]
+    let sortarr=arr.sort((a,b)=>{
+    return a-b
+    })
+    console.log(sortarr)
+
+
+    20-10 =10 if val is positive ---it will swap b before a
+                         20,10  -----10,20
+    
+   let sortarr=data.sort((a,b)=>{
+    return a.age-b.age
+    })
+    console.log(sortarr)
+
+    some
+    it returns true if some of any element is passing 
+    certain condition by providing a function
+    let adults=data.some((val)=>{
+        return val.age>18
+    })
+    console.log(adults)//true
+
+    every
+    it return true only if all of the elements is passing 
+    a certain condition by providing a function.
+    let adults=data.every((val)=>{
+        return val.age>18
+    })
+    console.log(adults)
+
+
+    find 
+    it is used to get first precedence of an element in 
+    array that passes  a condition
+
+    let newarr=data.find((val,ind)=>{
+        return val.branch=='cse'
+    })
+    console.log(newarr);//{name: 'john', age: 25, branch: 'cse'}
+
+
+
+
+    */ 
+        let data=[
+            {
+                name:'john',
+                age:25,
+                branch:'cse'
+            },
+            {
+                name:'jessy',
+                age:19,
+                branch:'cse'
+            },
+            {
+            name:'jack',
+            age:20,
+            branch:'civil'
+        },
+        {
+            name:'jenny',
+            age:17,
+            branch:'cse'
+        }
+    ]
+
+    // let newarr=data.find((val)=>{
+    //     return val.branch=='cse'
+    // })
+    // console.log(newarr);
+    
+
+
+    //combining multiple array methods
+    let arr=[10, 25, 30, 45, 50]
+
+    let newarr=arr.map(val=>val+val).filter(val=>val>60)
+    console.log(newarr)
+
+    let newarr2=arr.filter(val=>val%2==0).reduce((acc,val)=>acc+val,0)
+    console.log(newarr2)
+    </script>
+</body>
+</html>
