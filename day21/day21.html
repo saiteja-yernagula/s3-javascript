@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+
+        /*
+        hof
+        foreach 
+        map 
+        filter 
+        reduce
+        sort 
+        some
+        every
+        find
+
+
+
+        
+        
+        */ 
+
+const data = [
+  { name: "Laptop", price: 70000, rating: 4.5, inStock: true },
+  { name: "Phone", price: 35000, rating: 4.2, inStock: true },
+  { name: "Tablet", price: 25000, rating: 3.8, inStock: true },
+  { name: "Headphones", price: 4000, rating: 4.8, inStock: true },
+  { name: "Smartwatch", price: 15000, rating: 4.0, inStock: false },
+];
+
+let newdata=data.map((val)=>{
+    return {...val,gst:val.price*0.18}
+})
+console.log(newdata)
+
+let filterdata=data.filter(val=>val.rating>4)
+console.log(filterdata)
+
+let total=data.reduce((acc,val)=>val.price+acc,0)
+console.log(total)
+
+let sortbyrating=data.sort((a,b)=>a.rating-b.rating)
+console.log(sortbyrating);
+
+let sortbyprice=data.sort((c,d)=>c.price-d.price)
+console.log(sortbyprice);
+
+let checkstock=data.some((val)=>val.inStock==true)
+console.log(checkstock);
+
+let checkratings=data.every((val)=>val.rating>3)
+console.log(checkratings)
+
+    </script>
+    
+</body>
+</html>

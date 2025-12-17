@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap:10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>filtered products</h1>
+    
+    <label for="">select your brand</label>
+    <select name="" id="filterbybrand">
+        <option value="all">all</option>
+        <option value="apple">apple</option>
+        <option value="samsung">samsung</option>
+        <option value="onePlus">onePlus</option>
+    </select><br>
+    <br>
+
+
+    <label for="">search by price</label>
+    <input type="text" id="filterbyprice">
+    
+<br><br>
+    <label for="">sort</label>
+    <select name="" id="sortbyprice">
+        <option value="all">all</option>
+        <option value="high">high to low</option>
+        <option value="low">low to high</option>
+    </select><br>
+    
+
+    <div class="container"></div>
+    <script>
+        
+        
+        let products = [
+            {
+                brand: "apple",
+                name: "iPhone 15",
+                price: 80000,
+                img: "https://picsum.photos/seed/apple1/200"
+            },
+            {
+                brand: "samsung",
+                name: "Galaxy S23",
+                price: 70000,
+                img: "https://picsum.photos/seed/samsung1/200"
+            },
+            {
+                brand: "onePlus",
+                name: "OnePlus 11",
+                price: 55000,
+                img: "https://picsum.photos/seed/oneplus1/200"
+            },
+            {
+                brand: "apple",
+                name: "iPhone 14",
+                price: 60000,
+                img: "https://picsum.photos/seed/apple2/200"
+            },
+            {
+                brand: "samsung",
+                name: "A52",
+                price: 25000,
+                img: "https://picsum.photos/seed/samsung2/200"
+            }
+        ];
+
+        let container=document.querySelector('.container')
+
+        function display(arr){
+            container.innerHTML=''
+
+            arr.forEach((val)=>{
+             card=document.createElement('div')
+             console.log(card)
+             card.innerHTML=`
+             <h1>${val.brand}</h1>
+             <h1>${val.name}</h1>
+             <p>${val.price}</p>
+             <img src=${val.img}>
+             `
+             container.append(card)
+                
+            })
+        }
+
+        display(products)
+
+        let filterbybrand=document.getElementById('filterbybrand')
+
+        filterbybrand.addEventListener('change',()=>{
+            let newfilterarr=products.filter(val=>val.brand==filterbybrand.value)
+            display(newfilterarr)
+            
+            if(filterbybrand.value=='all'){
+             display(products)
+            }
+        })
+
+        let filterbyprice=document.getElementById('filterbyprice')
+        filterbyprice.addEventListener('input',()=>{
+
+            let newfilterarr=products.filter(val=>val.price<filterbyprice.value)
+            display(newfilterarr)
+            if(filterbyprice.value==''){
+             display(products)
+
+            }
+        })
+
+
+        let sortbyprice=document.getElementById('sortbyprice')
+        sortbyprice.addEventListener('change',()=>{
+            console.log()
+            if(sortbyprice.value=='high'){
+                let sortedarr=products.sort((a,b)=>b.price-a.price)
+                display(sortedarr)   
+            }
+            else if (sortbyprice.value=='low'){
+                let sortedarr=products.sort((a,b)=>a.price-b.price)
+                display(sortedarr)
+
+            }
+            else{
+                display(products)
+            }
+        })
+    </script>
+</body>
+</html>
