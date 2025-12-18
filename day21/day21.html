@@ -34,21 +34,21 @@ const data = [
   { name: "Smartwatch", price: 15000, rating: 4.0, inStock: false },
 ];
 
-let newdata=data.map((val)=>{
-    return {...val,gst:val.price*0.18}
-})
-console.log(newdata)
+// let newdata=data.map((val)=>{
+//     return {...val,gst:val.price*0.18}
+// })
+// console.log(newdata)
 
-let filterdata=data.filter(val=>val.rating>4)
-console.log(filterdata)
+// let filterdata=data.filter(val=>val.rating>4)
+// console.log(filterdata)
 
-let total=data.reduce((acc,val)=>val.price+acc,0)
-console.log(total)
+// let total=data.reduce((acc,val)=>val.price+acc,0)
+// console.log(total)
 
-let sortbyrating=data.sort((a,b)=>a.rating-b.rating)
+let sortbyrating=[...data].sort((a,b)=>a.rating-b.rating)
 console.log(sortbyrating);
 
-let sortbyprice=data.sort((c,d)=>c.price-d.price)
+let sortbyprice=[...data].sort((c,d)=>c.price-d.price)
 console.log(sortbyprice);
 
 let checkstock=data.some((val)=>val.inStock==true)

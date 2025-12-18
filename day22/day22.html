@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="console.log(this)">click</button>
+  <script>
+    /*
+  
+    object 
+    it is used to store data in key value pairs
+    and accesed by named indexing
+    
+    how to create object
+    by literal notation
+    let obj={
+    objkey:value,
+    objkey:value,
+    }
+    let obj={
+    name:'john',
+    age:25
+    }
+
+    by constuctor
+    let obj=new Object()
+
+    how to access
+    dot knotation
+    obj.keyname
+    console.log(obj.name)//john
+
+    square bracket knotation
+    obj['key']
+    console.log(obj['age'])//25
+
+    how to modify
+    obj.name='jessy'
+    obj['age']=23
+
+    how to delete
+    delete obj.name
+    delete obj['age']
+
+    how to add
+    obj.city='hyd'
+    obj.role='developer'
+
+    how to iterate
+    for (let i in obj){
+    console.log(i)//keys
+    console.log(obj[i])//values
+   }
+
+   object destructuring
+   let obj={
+   name:'john',
+   age:25,
+   address:{
+   country:'india',
+   city:'hyd'
+   }}
+
+   let {name:n,age:a,address:{country,city:c}}=obj
+   console.log(c)//hyd
+
+
+   spread operator
+   / spread operator
+   let b=obj//shallow copy
+   b.name='jessy'
+
+   let c={...obj}//deep copy using spread operator
+   c.age=30
+   console.log(c)
+   console.log(obj)
+
+
+   object method
+
+
+    
+
+
+
+
+    
+   
+   let obj={
+   name:'john',
+   age:25,
+   details:function (){//this represent the object
+   console.log(this,this.name ,this.age)
+},
+   details2:()=>{
+    console.log(this)//window - it will give parent object
+}
+}
+obj.details()
+obj.details2()
+
+console.log(this)//window
+
+
+object methods
+1) Object.key(obj)
+it will return all the key of an object in an
+array format
+console.log(Object.keys(obj))//[name,age]
+
+2) Object.values(obj)
+it will return all the values of an object in an
+array format
+console.log(Object.values(obj))//[john,25]
+
+3) Object.entries(obj)
+it will return all the keys and values of an object
+in a single array like pairs
+console.log(Object.entries(obj))//[[name,john],[age,25]]
+
+4) Object.assign(target,source,source)
+let address={
+    city:'hyd',
+    state:'telangana'
+}
+console.log(Object.assign({},obj,address))//create new
+console.log(obj)
+console.log(Object.assign(obj,address))//mutates original
+console.log(obj)
+*/ 
+
+let obj={
+   name:'john',
+   age:23
+}
+Object.seal(obj)//cannot add and delete anything in an object
+Object.freeze(obj)//cannot add,modify and delete anything in an object
+obj.name='jessy'
+delete obj.age
+obj.city='hyd'
+console.log(obj)
+//check existence
+console.log(obj.hasOwnProperty('name'))//true
+console.log(obj.hasOwnProperty('role'))//false
+</script>  
+</body>
+</html>
