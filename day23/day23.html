@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        strings
+        it is collection of characters that are
+        enclosed in single or double or back ticks
+
+        strings are immutable
+
+        how to create a string
+        let str='hello world'
+        let stt2="hello js"
+        let str3=`
+        multi 
+        line 
+        string
+        `
+        how to make string interpolation
+        use template literals
+        let name='john'
+        let str=`hello ${name}`
+        
+        how to iterate
+        for in
+        for (let i in str){
+        console.log(i)//indexes
+        console.log(str[i])//values
+        }
+
+        for of 
+        for (let i of str){
+        console.log(i)//values
+        }
+
+        for 
+        for ( let i=0;i<str.length;i++){
+        console.log(str[i])//values
+        }
+
+        str='hello world'
+        string methods
+        1. str.length
+        it is used to return the no of characters in 
+        a string
+        console.log(str.length)
+     
+        2. at method
+        it is used to return the character 
+        at a specified index and also takes negative
+        indexes
+        console.log(str.at(-1))//d
+        console.log(str.at(0))//h
+
+        3. str.charAt(0)
+        it is used to return the character at 
+        a specified index but doent take negative
+        indexes
+        console.log(str.charAt(0))//h
+
+        4. str.charCodeAt()
+        it is used to return the ascii code of a character
+         at a index
+        console.log(str.charCodeAt(0))//104
+
+        5. String.fromCharCode(65)
+        it is used to return the character at that
+        specified ascii code
+        console.log(String.fromCharCode(65))//A
+
+        6. str.slice(starpos,endposit)
+        it is used to slice out  a part of an string
+        and it also takes negative indexes
+        str='javascript'
+        console.log(str.slice(0,4))//java
+        console.log(str.slice(4))//script
+        console.log(str.slice(-6,-3))//scr
+
+    7. str.substring(start,end)
+    it is same like slice but it takes
+    negative values as 0
+    console.log(str.substring(4))//script
+    console.log(str.substring(-6))//javascript
+    
+    8.str.substr(start,length)
+    it is also for slice but the second parameter
+    is length and also take negative indexes
+    console.log(str.substr(0,4))//java
+    console.log(str.substr(4,3))//scr
+    console.log(str.substr(-4,3))//rip
+
+    9. str.concat(str1,str2)
+    it is used to merge the two or more strings
+    let str='hello'
+    let str2=' world'
+    console.log(str.concat(str2))//hello world
+
+    10. str.split('separator')
+    it is used to convert the string into array
+     let str ='javascript is  weird'
+     let str ='javascript is  weird'
+    console.log(str.split(' '))// ['javascript', 'is', '', 'weird']
+ 
+    11. str.trim()
+    it is used to remove the white spaces
+    at the beginning and ending
+    let str='          hello  world      '
+    console.log(str.trim())
+
+    12. str.replace('oldcharact','newcontent')
+    it is used to replace the partial string with 
+    new content  of first precedence
+    let str='Hello world hello js'
+console.log(str.replace(/hello/ig,'hi'))
+
+13) 
+str.upperCase()
+str.lowerCase()
+
+search methods
+1) str.indexOf()
+it is used to return a index of a specified
+character and if not found returns -1
+let str='hello world'
+console.log(str.indexOf('h'))//0
+console.log(str.indexOf('o'))//4
+2) str.lastIndexOf()
+it is used to return a index of a specified
+character 
+console.log(str.lastIndexOf('o'))//7
+console.log(str.lastIndexOf('z'))//-1
+3) str.search()
+it is used to return a index of a substring
+console.log(str.search('world'))6
+4) str.includes()
+it is used to check the existence of a character
+and returns true or false
+console.log(str.includes('hello'))//true
+console.log(str.includes('z'))//false
+
+
+
+
+
+
+        */
+
+
+         </script>
+</body>
+</html>
