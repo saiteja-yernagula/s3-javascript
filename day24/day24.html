@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+strings
+string methods
+
+number
+1) Number("1")
+it will convert the string into number
+console.log(typeof "1")
+console.log(typeof Number("1"))
+
+2) toFixed()
+it is used to convert the number into fixed
+nof of decimal notations
+var a=10.61
+console.log(a.toFixed(1))//10.6
+
+var a=10.69
+console.log(a.toFixed(1))//10.7
+
+var a=10
+console.log(a.toFixed(1))//10.0
+
+3) parseInt()
+it is used to extract a number from a string
+and it stops checking when it hits non number
+console.log(parseInt("123hello"))//123
+console.log(parseInt("12.3hello"))//12
+console.log(parseInt("12,2hello"))//12
+console.log(parseInt("1       2,2hello"))//1
+console.log(parseInt("hello123"))//NaN
+
+4) parseFloat()
+it is used to extract a number with floating value
+from a string and stops checking when it hits
+non number
+console.log(parseFloat("123hello"))//123
+console.log(parseFloat("12.3hello"))//12.3
+console.log(parseFloat("12.2,2hello"))//12.2
+console.log(parseFloat("1       2,2hello"))//1
+console.log(parseFloat("hello123"))//NaN
+
+5) isNaN()
+it is used to check whether it is not a number or not
+if it is number it returns false
+it it is not a number it returns true
+console.log(isNaN("hello"))//true
+console.log(isNaN(undefined))//true
+console.log(isNaN(NaN))//true
+
+console.log(isNaN(null))//false
+console.log(isNaN(10))//false
+console.log(isNaN(true))//false
+
+math method
+1) Math.ceil()
+it is used round up a number to the next largest 
+integer
+console.log(Math.ceil(9.9))//10
+console.log(Math.ceil(9.1))//10
+console.log(Math.ceil(-9.9))//-9
+console.log(Math.ceil(-9.1))//-9
+
+2) Math.floor()
+it is used to round down a number to the 
+smallest integer
+console.log(Math.floor(9.9))//9
+console.log(Math.floor(9.1))//9
+console.log(Math.floor(-9.9))//-10
+console.log(Math.floor(-9.1))//-10
+
+3) Math.round()
+it will round off a number to the nearest integer
+console.log(Math.round(9.9))//10
+console.log(Math.round(9.1))//9
+console.log(Math.round(-9.9))//-10
+console.log(Math.round(-9.1))//-9
+
+4) Math.random()
+it is used to generate random number between
+0-1
+
+console.log(Math.random())//0-1
+console.log(Math.floor(Math.random()*10))//1-10
+console.log(Math.floor(Math.random()*10000))//1-10
+
+let arr=['js','html','css']
+console.log(Math.random()*arr.length)
+console.log(arr[Math.floor(Math.random()*arr.length)])
+
+5) Math.abs()
+convert negative into positive
+console.log(Math.abs(-10));//10
+
+6) Math.trunc()
+it is used to remove the decimal part in a number
+console.log(Math.trunc(10.9999))//10
+
+7)
+Math.min(10,1,2)
+Math.max(10,1,2)
+        */
+
+    </script>
+    
+</body>
+</html>
