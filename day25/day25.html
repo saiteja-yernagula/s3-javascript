@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="date">
+    <button onclick="calc()">calculate</button>
+    <h1 id="date"></h1>
+    <script>
+        /*
+date methods
+
+let date =new Date()
+console.log(date)
+
+date methods
+1) date.getFullYear()-extracts the year from date component
+2) date.getMonth() - extract the month index from date - 0-11
+let month=['','','','','','','july','aug','sep','oct','nov','dec']
+console.log(month[date.getMonth()])
+3) date.getDay() -extracts a week day from date compo 0-6
+let weeks=['sun','mon','tue']
+console.log(weeks[date.getDay()])
+4) date.getDate()-extract a current date
+
+time
+5) date.getHours()
+6) date.getMinutes()
+7) date.getSeconds()
+
+methods for entire date and time
+console.log(date.toDateString())
+console.log(date.toLocaleDateString())
+console.log(date.toTimeString())
+console.log(date.toLocaleTimeString())
+
+set methods- to set a customized date
+let olddate=new Date()
+olddate.setFullYear(2020)
+olddate.setMonth(10)
+olddate.setDate(20)
+olddate.setHours(1)
+olddate.setMinutes(30)
+olddate.setSeconds(10)
+console.log(olddate)
+        */ 
+
+let inp=document.querySelector('input')
+function calc(){
+let olddate=new Date(inp.value)
+let newdate=new Date()
+console.log("age differnce in years : ",newdate.getFullYear()-olddate.getFullYear())
+let secdiff=newdate-olddate
+console.log(secdiff/(24*60*60*1000))//days difference
+}
+
+
+setInterval(()=>{
+    let h1=document.querySelector('h1')
+    h1.innerHTML=new Date().toLocaleTimeString()
+    console.log()
+},1000)
+       
+
+
+    </script>
+</body>
+</html>
