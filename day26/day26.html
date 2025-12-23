@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="fun()">btn</button>
+    <script>
+        /*
+ browser object model(bom)
+ it is provided by the browser where we can get nd  control few
+ things
+
+ bom objects
+ 1) window objects
+ 2) storage
+ 3) navigator
+ 4) history
+ 5) screen objects
+ 6) location objects
+ 7) timers
+
+ window objects
+ 1) window.prompt()
+ 2) window.alert()
+ 3) window.confirm('') returns true or false
+ 4) window.open('')
+ function fun(){
+    for(let i=0;i<=60000;i++){
+        console.log(i)
+    }
+    window.open('https://www.programiz.com/python-programming/online-compiler/')
+}
+
+for small tab
+window.open('https://www.programiz.com',"_blank",'width=300,height=300')
+
+5) window.close()
+function fun(){
+    if (window.confirm('are u really want to exit')){
+        window.close()
+    }
+}
+6) window.innerWidth and window.innerHeight
+        */ 
+       console.log(window.innerHeight)
+       console.log(window.innerWidth)
+    </script>
+</body>
+</html>
