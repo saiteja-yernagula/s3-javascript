@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>page 1</h1>
+    <a href="page2.html">new</a>
+    <script>
+        /*
+browser object model (bom)
+1) window objects
+2) storage objects
+localstorage- store the data in the browser
+        even the session is expired
+
+let level=10
+localStorage.setItem('gamelevel',level)//sent a data to browser
+
+session storage- storage is limited upto the active session
+
+let score=100
+sessionStorage.setItem('gamescore',score)
+
+
+3) navigator
+4) history
+5) screen
+6) location
+7) timers
+
+//how to send data-main file
+let level=12
+localStorage.setItem('gamelevel',level)//sent a data to browser
+
+//get the data and display-new file
+let data =localStorage.getItem('gamelevel')
+document.body.innerHTML=data
+
+
+//    how to sent a object
+let gamedetails={
+    name:'pubg 2.0',
+    noofkills:'500'
+}
+localStorage.setItem('gamedetails',JSON.stringify(gamedetails))
+ 
+JSON.stringify(obj)//this will convert the js object into json object
+
+//how to get an object and display
+let data =JSON.parse(localStorage.getItem('gamedetails'))
+      console.log(data)
+      document.body.innerHTML=data.name + data.noofkills
+JSON.parse(obj)//this will convert the json object into js object
+
+
+navigator objects
+console.log(navigator.onLine)//return true or false
+
+navigator.geolocation.getCurrentPosition((position)=>{
+    console.log(position.coords.latitude)
+    console.log(position.coords.longitude)
+})
+
+location objects
+console.log(location.href)
+console.log(location.hostname)
+console.log(location.host)
+console.log(location.protocol)
+console.log(location.port)
+
+history objects
+history.back()
+history.forward()
+history.go()
+
+screen objects
+console.log(screen.width)
+console.log(screen.height)
+
+*/
+console.log(screen.width)
+console.log(screen.height)
+
+</script>
+</body>
+</html>
