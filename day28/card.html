@@ -33,6 +33,9 @@
     </style>
 </head>
 <body>
+    <h1>
+        <a href="cart.html">view the cart</a>
+    </h1>
 
 
     <script>
@@ -341,18 +344,30 @@
         
         let container=document.createElement('div')
         container.classList.add('parent')
+        let arr=[]
         for (let i of data){
         let card=document.createElement('div')
         let img=document.createElement('img')
         let title=document.createElement('h1')
         let price=document.createElement('p')
-
+        
         img.setAttribute('src',i.image)
         title.innerText=i.title.slice(0,10)
         price.innerText=i.price
+        
+        
+        let btn=document.createElement('button')
+        btn.innerText='add to cart'
+        btn.addEventListener('click',()=>{
+            arr.push(i)
+            console.log(arr)
+            localStorage.setItem('products',JSON.stringify(arr))
+        })
+        card.append(img,title,price,btn)
 
-        card.append(img,title,price)
+        
         container.append(card)
+        
         }
 
         document.body.append(container)
