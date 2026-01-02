@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    /*
+callback
+when a function definitin is passed to another function
+as a argument and later called on outer function
+
+function one(callback){
+console.log('one')
+callback()
+}
+function two(callback){
+console.log('two')
+callback()
+}
+function three(){
+console.log('three')
+}
+
+
+    
+
+
+one(()=>{
+    two(()=>{
+        three()
+    })
+})
+//ex-2
+function cart(callback){
+setTimeout(()=>{
+    console.log('products are added to cart')
+   callback()
+},2000)
+}
+function payment(callback){
+    setTimeout(()=>{
+        console.log('payment processed')
+        callback()
+    },10000)
+}
+function order(){
+    console.log('order placed')
+}
+
+cart(()=>{
+    payment(()=>{
+        order()
+    })
+})
+
+
+
+
+inp-10
+step1 - 10+10
+step2 - 20-5
+step3 - 15*4
+step4- 60/5
+
+final =12
+
+*/ 
+function add(val,callback){
+    callback(val+10)
+}
+function sub(val,callback){
+    callback(val-5)
+}
+function mul(val,callback){
+    callback(val*4)
+}
+function div(val,callback){
+    callback(val/5)
+}
+
+add(10,(addres)=>{
+    sub(addres,(subres)=>{
+        mul(subres,(mulres)=>{
+            div(mulres,(divres)=>{
+                console.log(divres)
+            })
+        })
+    })
+})
+    </script>
+</body>
+</html>
