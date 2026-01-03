@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*
+        callbacks 
+        callback hell  or pyramid of doom
+
+        to mitigate callback hell
+        1) promises
+        2) async await
+
+        promise 
+    it  is used to represent eventual completion
+    or failure of an asynchronous operation
+    it is used to handle asynchronous operation
+
+    three states
+    pending
+    fullfilled 
+    rejected
+
+    promise has two parts
+    1) creating a promise
+
+    let data=10
+    let a = new Promise((res,rej)=>{
+    if(data==10){
+    res('promise fullfiledd')
+    }else{
+    rej('promise failed')}
+    })
+
+    2) consuming a promise
+      using .then .catch
+     
+      a
+      .then((finaloutput)=>console.log(finaloutput))
+      .catch((error)=>console.log(error))
+      
+      using async await 
+
+
+
+        
+        */
+        function cart() {
+            return new Promise((res) => {
+                res('products are added to cart')
+            })
+        }
+        function payment() {
+            return new Promise((res) => {
+                setTimeout(() => {
+                    res('payment is processed')
+                }, 2000)
+            })
+        }
+        function order() {
+            return new Promise((res) => {
+                res('order placed')
+            })
+        }
+
+        //promise chaining
+        cart()
+            .then((cres) => {
+                console.log(cres)
+                return payment()
+            })
+            .then((pres) => {
+                console.log(pres)
+                return order()
+            })
+            .then((ores) => { console.log(ores) })
+
+
+            function one(){
+                return new Promise((res)=>{
+                    setTimeout(()=>{
+
+                        res('one')
+                    },10000)
+                })
+            }
+            function two(){
+                return new Promise((res)=>{
+                    setTimeout(()=>{
+
+                        res('two')
+                    },2000)
+                })
+            }
+            function three(){
+                return new Promise((res)=>{
+                    setTimeout(()=>{
+
+                        res('three')
+                    },30000)
+                })
+            }
+            Promise.race([one(),two(),three()])
+            .then((res)=>console.log(res))
+
+            Promise.all([one(),two(),three()])
+            .then((res)=>console.log(res))
+    </script>
+</body>
+
+</html>
