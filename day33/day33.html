@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*
+        promises
+        represents the eventual completion or failure of
+        an async operation
+
+        three states
+        pending
+        fullfilled
+        rejected
+
+        creating a promise
+        consuming a promise
+        1. then catch
+        2. async await
+
+
+        learning html 
+        learning css 
+        learning js
+
+        
+        
+
+        function html() {
+            return new Promise((res) => {
+                res('learning html')
+            })
+        }
+        function css() {
+            return new Promise((res) => {
+                res('learning css')
+            })
+        }
+        function js() {
+            return new Promise((res) => {
+                res('learning js')
+            })
+        }
+        //then catch-promise chaining
+        html()
+        .then((data) => {
+                console.log(data)
+                return css()
+            })
+            .then((data) => {
+                console.log(data)
+                return js()
+            })
+            .then((data) => {
+                console.log(data)
+            })
+            //using aynch await
+            
+            async function getfun(){
+                let a=await html()
+                let b=await css()
+                let c=await js()
+                console.log(a,b,c)
+            }
+            getfun()
+            
+            
+            function add(val){
+                return new Promise((res)=>{
+        res(val+10)
+    })
+}
+function sub(val){
+    return new Promise((res)=>{
+        res(val-5)
+    })
+}
+
+function mul(val){
+    return new Promise((res)=>{
+        res(val*4)
+    })
+}
+function div(val){
+    return new Promise((res)=>{
+        res(val/5)
+    })
+}
+
+//consume a promise
+add(10)
+.then((addres)=>{
+    return sub(addres)
+})
+.then((subres)=>{
+    return mul(subres)
+})
+.then((mulres)=>{
+    return div(mulres)
+})
+.then((divres)=>{
+    console.log(divres) 
+})
+
+async function fun(){
+    let addres=await add(10)
+    let subres=await sub(addres)
+    let mulres=await mul(subres)
+    let divres=await div(mulres)
+    console.log(divres)
+}
+fun()
+
+*/
+
+// how to call an api using then catch and async await
+let apilink="https://fakestoreapi.com/products/"
+
+fetch(apilink)
+.then((res)=>{
+    return res.json()
+}).then((res)=>{
+    console.log(res)
+}).catch((error)=>{
+    console.log(error)
+})
+
+async function getapidata(){
+  let data =await fetch(apilink)
+  let finaldata=await data.json()
+  console.log(finaldata)
+}
+getapidata()
+    </script>
+</body>
+
+</html>
