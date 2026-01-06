@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="getdata()">get apidata</button>
+    <button onclick="postdata()">post apidata</button>
+    <button onclick="putdata()">put apidata</button>
+    <button onclick="patchdata()">patch apidata</button>
+    <button onclick="deldata()">delete apidata</button>
+    <script>
+
+        //delete data
+        async function deldata(){
+    let inpid=prompt("enter id to be updated")
+    let obj={
+        city:"bangalore"
+    }
+    let data= await fetch (`http://localhost:3000/courses/${inpid}`,{
+    method:'DELETE',
+   
+   
+    })
+
+} 
+   //put data
+async function patchdata(){
+    let inpid=prompt("enter id to be updated")
+    let obj={
+        city:"bangalore"
+    }
+    let data= await fetch (`http://localhost:3000/courses/${inpid}`,{
+    method:'PATCH',
+    headers:{
+        'Content-Type':'application/json'
+    },
+    body:JSON.stringify(obj)
+    })
+
+}     
+//put data
+async function putdata(){
+    let inpid=prompt("enter id to be updated")
+    let obj={
+        city:"bangalore"
+    }
+    let data= await fetch (`http://localhost:3000/courses/${inpid}`,{
+    method:'PUT',
+    headers:{
+        'Content-Type':'application/json'
+    },
+    body:JSON.stringify(obj)
+    })
+
+}
+async function postdata(){
+    let obj={ id: 6, 
+        title: "gen ai",
+         duration: "1.5 Months"
+         }
+    let data= await fetch ('http://localhost:3000/courses',{
+    method:'POST',
+    headers:{
+        'Content-Type':'application/json'
+    },
+    body:JSON.stringify(obj)
+    
+    })
+    let finaldata=await data.json()
+    console.log(finaldata)
+}
+        //get data 
+async function getdata (){
+    let data= await fetch ('http://localhost:3000/courses')
+    let finaldata=await data.json()
+    console.log(finaldata)
+}
+/*
+
+steps
+1) open powershell -run as adiminstrator
+enter GetExecutionPolicy
+enter SetExecutionPolicy RemoteSigned
+enter y
+
+2) 
+install node js
+open command prompt
+node -v
+npm -v
+
+3) select a folder - open in vscode --terminal in vscode
+change into command prompt
+enter npm init -y
+npm install -g json-server@0
+json-server --watch db.json
+in db.json --add ur data in json format
+*/ 
+
+    </script>
+</body>
+</html>
