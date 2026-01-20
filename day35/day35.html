@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<script>
+
+    /*
+    oops- object oriented programming structure
+
+    class - template for an object
+    object - instance of class
+
+    encapsulation
+    inheritance
+    acquiring the properties and methods from parent 
+    classs to child class
+
+    polymorphism 
+    abstraction
+
+
+
+
+    */
+   class Emp{
+    name
+    #salary
+    role
+    constructor(n,s,r){//it calls automatic and initilate
+    this.name=n
+    this.#salary=s
+    this.role=r
+    }
+
+    get details(){
+        return this.#salary
+    }
+    
+    set setsal(sal){
+        this.#salary=sal
+    }
+   } 
+
+   let emp1=new Emp('john',100000,'developer')
+   console.log(emp1.salary)
+   emp1.setsal=1000
+   console.log(emp1.details)
+
+//  inheritance
+//  acquiring the properties and methods from parent 
+//  classs to child class
+   class Animal{
+    weight
+    height
+
+    constructor(weight,height){
+        this.weight=weight
+        this.height=height
+    }
+
+    details(){
+        console.log('weight is '+ this.weight+ " height is " + this.height )
+    }
+   }
+
+class Dog extends Animal{
+    breed
+    usecase
+    constructor(breed,usecase,weight,height){
+    super(weight,height)//it is used to invoke the parent constructor     
+    this.breed=breed
+    this.usecase=usecase
+}
+
+    details(){
+   console.log('weight is '+ this.weight+ " breed is " + this.breed )
+    }
+}
+
+let dog1=new Dog('lab','playfull','20kgs','4feet')
+dog1.details()//child method
+// let animal2=new Animal('20kgs', '5feet')
+// animal2.details()//parent method
+</script>
+    
+</body>
+</html>
